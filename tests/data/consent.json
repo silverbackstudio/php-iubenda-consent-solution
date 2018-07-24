@@ -1,0 +1,30 @@
+{
+    "subject": {
+        "id": "J02eZvKYlo2ClwuJ1",
+        "email": "john@example.com",
+        "first_name": "John",
+        "last_name": "Doe",
+        "full_name": "John Doe",
+        "verified": false
+    },
+    "legal_notices": [
+    {
+      "identifier": "privacy_policy",
+      "version": "123"
+    },
+    {
+      "identifier": "terms",
+      "version": "123"
+    }
+    ],
+    "proofs": [
+    {
+      "content": "proof_1",
+      "form": "proof form"
+    }
+    ],
+    "preferences": {
+        "newsletter": false,
+        "privacy_policy": true
+    }
+}

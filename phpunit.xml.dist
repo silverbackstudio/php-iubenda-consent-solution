@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit bootstrap="./tests/bootstrap.php"
+		colors="true"
+		convertErrorsToExceptions="true"
+		convertNoticesToExceptions="true"
+		convertWarningsToExceptions="true"
+		stopOnFailure="false">
+		<testsuites>
+			<testsuite name="Test Suite">
+				<directory>./tests</directory>
+			</testsuite>
+		</testsuites>
+		<php>
+			<const name="CONSENT_SOLUTION_API_KEY" value="foobar"/>
+	        <const name="CONSENT_SOLUTION_TEST_CONSENT" value="foobar"/>			
+        	<const name="CONSENT_SOLUTION_TEST_SUBJECT" value="foobar"/>				
+		</php>		
+</phpunit>
