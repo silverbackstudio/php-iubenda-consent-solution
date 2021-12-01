@@ -34,7 +34,7 @@ final class ConsentTest extends TestCase
         $this->assertEquals($consent_data['proofs'][0],  $consent->proofs[0]->toArray());
         $this->assertEquals($consent_data['legal_notices'][0], $consent->legal_notices[0]->toArray());
         $this->assertEquals($consent_data['preferences'], $consent->preferences);
-
+        $this->assertEquals($consent_data['ip_address'], $consent->ip_address);
     }
     
     public function testCanSetTimestamp()

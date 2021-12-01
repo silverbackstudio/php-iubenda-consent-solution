@@ -98,6 +98,12 @@ class Consent extends ICSObject
      */
     public $source;       
 
+    /**
+     * The IP address of the subject
+     * 
+     * @var string
+    */
+    public $ip_address;
 
     /**
      * Configures the specified content in the class
@@ -128,6 +134,11 @@ class Consent extends ICSObject
             $this->setTimestamp($properties['timestamp']); 
             unset($properties['timestamp']);
         }        
+
+        if (!empty($properties['ip_address']) ) {
+            $this->setIpAddress($properties['ip_address']); 
+            unset($properties['ip_address']);
+        }
       
         parent::configure($properties); 
       
@@ -242,7 +253,19 @@ class Consent extends ICSObject
         }
       
           $this->timestamp = $timestamp;  
-    }    
+    }   
+    
+    /**
+     * Sets the subject IP address
+     * 
+     * @param string $address The IP address
+     * 
+     * @return void
+     */
+    public function setIpAddress( $address )
+    {
+        $this->ip_address = $address;
+    }
 
     /**
      * Cast this object as array
@@ -274,6 +297,10 @@ class Consent extends ICSObject
             $output['source']  = $this->source;
         }  
         
+        if ($this->ip_address  ) {
+            $output['ip_address'] = $this->ip_address;
+        }
+
         if ($this->subject ) {
             $output['subject'] = $this->subject->toArray();
         } else {
