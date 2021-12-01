@@ -22,7 +22,7 @@ namespace Iubenda\ConsentSolution;
  * @version  Release: 1.0
  * @link     https://github.com/silverbackstudio/php-iubenda-consent-solution
  */
-class Proof extends Object
+class Proof extends ICSObject
 {
 
     /**

@@ -1,6 +1,6 @@
 <?php
 /**
- * Iubenda Consent Obejct Class.
+ * Iubenda Consent Object Class.
  *
  * @category Iubenda
  * @package  ConsentSolution
@@ -21,7 +21,7 @@ namespace Iubenda\ConsentSolution;
  * @version  Release: 1.0
  * @link     https://github.com/silverbackstudio/php-iubenda-consent-solution
  */
-abstract class Object
+abstract class ICSObject
 {
 
     /**

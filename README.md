@@ -20,7 +20,7 @@ $consent = new ConsentSolution\Consent;
 
 $user_id = 10;
 
-$consent->setSubject( 
+$consent->setSubject(
     [
         'id' => sha1( 'my_application_' . $user_id ), // you can omit this field
         'email' => 'user@example.com',
@@ -31,12 +31,12 @@ $consent->setSubject(
     ]
 );
 
-$consent->addLegalNotice( [ 'identifier' => 'privacy_policy' ] );            
+$consent->addLegalNotice( [ 'identifier' => 'privacy_policy' ] );
 
 $consent->addProof( [
-    'content' => json_encode( [ 
-        'first_name' => 'John', 
-        'last_name' => 'Doe', 
+    'content' => json_encode( [
+        'first_name' => 'John',
+        'last_name' => 'Doe',
         // other useful form fields
     ] ),
     'form' => '<form><input type="text" name="first_name">[...]</form>',
@@ -45,6 +45,8 @@ $consent->addProof( [
 $consent->preferences['privacy_policy'] = true;
 $consent->preferences['third_party'] = false;
 $consent->preferences['newsletter'] = true;
+
+$consent->setIpAddress('192.168.1.254');
 
 try {
     $saved_consent = $consentSolution->createConsent( $consent );
@@ -63,9 +65,9 @@ Copy the file `phpunit.xml.dist` in `phpunit.xml` in the library folder and defi
 
 ```xml
 	<php>
-        <const name="CONSENT_SOLUTION_API_KEY" value="foobar"/>			
-        <const name="CONSENT_SOLUTION_TEST_CONSENT" value="foobar"/>			
-        <const name="CONSENT_SOLUTION_TEST_SUBJECT" value="foobar"/>			        
+        <const name="CONSENT_SOLUTION_API_KEY" value="foobar"/>
+        <const name="CONSENT_SOLUTION_TEST_CONSENT" value="foobar"/>
+        <const name="CONSENT_SOLUTION_TEST_SUBJECT" value="foobar"/>
         ...
 	</php>
 ```

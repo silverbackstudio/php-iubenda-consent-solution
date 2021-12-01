@@ -24,7 +24,7 @@ use DateTime;
  * @version  Release: 1.0
  * @link     https://github.com/silverbackstudio/php-iubenda-consent-solution
  */
-class LegalNotice extends Object
+class LegalNotice extends ICSObject
 {
 
     /**
