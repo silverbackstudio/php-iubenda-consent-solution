@@ -25,7 +25,7 @@ use DateTime;
  * @version    Release: 1.0
  * @link       https://github.com/silverbackstudio/php-iubenda-consent-solution
  */
-class Consent extends Object
+class Consent extends ICSObject
 {
 
     /**
